@@ -1,0 +1,33 @@
+{
+    "name": "keith-mifsud/laravel-cms",
+    "description": "A Multi Site Content Management System for Laravel",
+    "keywords": ["laravel", "content management system", "cms", "multi site cms"],
+    "license": "MIT",
+    "type": "Laravel Package",
+    "authors": [
+        {
+            "name": "Keith Mifsud",
+            "homepage": "http://www.keith-mifsud.co.uk"
+        }
+    ],
+    "require": {
+        "php": "^5.6",
+        "illuminate/console": "^5.1",
+        "illuminate/support": "^5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "mockery/mockery": "0.9.*",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "KeithMifsud\\Cms": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/CmsTest.php"
+        ]
+    }
+}
