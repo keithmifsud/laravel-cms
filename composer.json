@@ -3,7 +3,6 @@
     "description": "A Multi Site Content Management System for Laravel",
     "keywords": ["laravel", "content management system", "cms", "multi site cms"],
     "license": "MIT",
-    "type": "Laravel Package",
     "authors": [
         {
             "name": "Keith Mifsud",
