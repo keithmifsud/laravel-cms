@@ -1,10 +1,11 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: Keith
- * Date: 29/08/2015
- * Time: 13:22
+ * This file is part of CMS
+ * a multi site content management system for Laravel
+ *
+ * @licence MIT
+ * @author Keith Mifsud <http://www.keith-mifsud.com>
  */
 
 /**
