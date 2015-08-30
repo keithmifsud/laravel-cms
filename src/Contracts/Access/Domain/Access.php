@@ -23,9 +23,13 @@ interface Access
     /**
      * Setup new Access Holder
      *
+     * @param string $username
+     * @param string $password
+     * @param string $type
+     *
      * @return Holder
      */
-    public static function newAccess();
+    public function newAccess($username, $password,  $type);
 
 
     /**
@@ -169,7 +173,7 @@ interface Access
      * @ToDo
      * @return Permission
      */
-    public static function newPermission(); // type(system, website, custom), group(users[create,update etc..]), name,
+    public static function newPermission();
 
 
     /**
@@ -191,9 +195,5 @@ interface Access
      * @return Permission
      */
     public static function retrieveWebsitePermissionByName($websiteIdentifier, $name);
-
-
-
-
 
 }

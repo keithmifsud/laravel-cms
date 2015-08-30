@@ -10,8 +10,9 @@
 
 namespace KeithMifsud\Test\Access\Domain;
 
-use KeithMifsud\Cms\Access\Domain\User;
+use KeithMifsud\Cms\Access\Domain\Access;
 use KeithMifsud\Test\CmsTest;
+use KeithMifsud\Cms\Access\Domain\User;
 
 /**
  * Class AccessTest
@@ -21,15 +22,23 @@ use KeithMifsud\Test\CmsTest;
 class AccessTest extends CmsTest
 {
 
-    private $accessHolder;
+
 
     public function setup()
     {
-        $this->accessHolder = new User();
+        parent::setup();
     }
-    public function testAccessHolderHasSystemRoleAccess()
-    {
 
+    /** @test */
+    public function testThatHolderOfValidTypeCanGainAccess()
+    {
+        $access = $this->app->make('KeithMifsud\Cms\Contracts\Access\Domain\Access');
+
+        $holder = $access->newAccess('username', 'password', 'user');
+
+        $this->assertTrue($holder->getTypeName() == 'user');
     }
+
+
 
 }

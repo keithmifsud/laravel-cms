@@ -25,19 +25,30 @@ class AccessServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->bindDomainContract();
+        $this->registerDomainProviders();
+        $this->bindDomainContracts();
+    }
+
+    public function registerDomainProviders()
+    {
+        $this->app->register(
+            'KeithMifsud\Cms\Access\Providers\Domain\HolderTypeServiceProvider'
+        );
     }
 
 
+
     /**
-     * Binds the Domain Contract with the
+     * Binds the Domain Contracts with the
      * package's Domain.
      *
      */
-    public function bindDomainContract()
+    public function bindDomainContracts()
     {
         $this->app->bind('KeithMifsud\Cms\Contracts\Access\Domain\Access', function($app) {
-           return new Access();
+           return new Access(
+               $this->app->make('KeithMifsud\Cms\Access\Domain\HolderType')
+           );
         });
     }
 }

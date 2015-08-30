@@ -27,6 +27,13 @@ class CmsTest extends TestCase
         parent::setUp();
     }
 
+    public function getPackageProviders($app)
+    {
+        return ['KeithMifsud\Cms\Providers\CmsServiceProvider'];
+    }
+
+
+    /** @test */
     public function testTheTest()
     {
         $false = false;
