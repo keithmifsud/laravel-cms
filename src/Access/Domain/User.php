@@ -10,6 +10,8 @@
 
 namespace KeithMifsud\Cms\Access\Domain;
 
+use KeithMifsud\Cms\Contracts\Access\Domain\Holder;
+
 
 class User implements Holder
 {

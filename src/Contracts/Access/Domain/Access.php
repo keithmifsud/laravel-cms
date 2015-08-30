@@ -7,17 +7,23 @@
  * @author Keith Mifsud <http://www.keith-mifsud.com>
  */
 
-namespace KeithMifsud\Cms\Contracts\Access;
+namespace KeithMifsud\Cms\Contracts\Access\Domain;
+
 
 /**
  * Interface Domain
  *
  * Contract for the Access Logic (Domain).
  *
- * @package KeithMifsud\Cms\Contracts\Domain
+ * @package KeithMifsud\Cms\Contracts\Access\Domain
  */
-interface Domain
+interface Access
 {
 
+    /**
+     * Setup new Access Holder
+     *
+     * @return Holder
+     */
     public function newAccess();
 }

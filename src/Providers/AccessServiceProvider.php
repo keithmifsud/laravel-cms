@@ -36,7 +36,7 @@ class AccessServiceProvider extends ServiceProvider
      */
     public function bindDomainContract()
     {
-        $this->app->bind('KeithMifsud\Cms\Contracts\Access\Domain', function($app) {
+        $this->app->bind('KeithMifsud\Cms\Contracts\Access\Domain\Access', function($app) {
            return new Access();
         });
     }

@@ -11,8 +11,8 @@
 namespace KeithMifsud\Test\Access\Domain;
 
 use KeithMifsud\Test\CmsTest;
-use KeithMifsud\Cms\Access\Domain\Holder;
 use KeithMifsud\Cms\Access\Domain\User;
+use KeithMifsud\Cms\Contracts\Access\Domain\Holder;
 
 /**
  * Class HolderTest
@@ -32,6 +32,6 @@ class HolderTest extends CmsTest
 
     public function testUserIsInstanceOfHolder()
     {
-        $this->assertInstanceOf('KeithMifsud\Cms\Access\Domain\Holder', $this->user);
+        $this->assertInstanceOf('KeithMifsud\Cms\Contracts\Access\Domain\Holder', $this->user);
     }
 }

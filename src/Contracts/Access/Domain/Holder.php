@@ -7,14 +7,14 @@
  * @author Keith Mifsud <http://www.keith-mifsud.com>
  */
 
-namespace KeithMifsud\Cms\Access\Domain;
+namespace KeithMifsud\Cms\Contracts\Access\Domain;
 
 /**
  * Interface Holder
  *
- * Defines the Access Holder Types
+ * Defines the Access Holder's Requirements
  *
- * @package KeithMifsud\Cms\Access\Domain
+ * @package KeithMifsud\Cms\Contracts\Access\Domain
  */
 interface Holder
 {
