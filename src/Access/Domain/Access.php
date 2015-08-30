@@ -10,7 +10,7 @@
 
 namespace KeithMifsud\Cms\Access\Domain;
 
-use KeithMifsud\Cms\Contracts\Access\Domain as DomainContract;
+use KeithMifsud\Cms\Contracts\Access\Domain\Access as AccessContract;
 
 /**
  * Class Access
@@ -19,7 +19,7 @@ use KeithMifsud\Cms\Contracts\Access\Domain as DomainContract;
  *
  * @package KeithMifsud\Cms\Access\Domain
  */
-class Access implements DomainContract
+class Access implements AccessContract
 {
 
 }
