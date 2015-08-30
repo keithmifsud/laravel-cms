@@ -10,13 +10,14 @@
 namespace KeithMifsud\Cms\Contracts\Access;
 
 /**
- * Interface Access
+ * Interface Domain
  *
  * Contract for the Access Logic (Domain).
  *
- * @package KeithMifsud\Cms\Contracts\Access
+ * @package KeithMifsud\Cms\Contracts\Domain
  */
-interface Access
+interface Domain
 {
 
+    public function newAccess();
 }
