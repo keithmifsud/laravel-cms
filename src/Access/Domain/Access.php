@@ -10,7 +10,7 @@
 
 namespace KeithMifsud\Cms\Access\Domain;
 
-use KeithMifsud\Cms\Contracts\Access\Access as AccessContract;
+use KeithMifsud\Cms\Contracts\Access\Domain\Access as AccessContract;
 
 /**
  * Class Access

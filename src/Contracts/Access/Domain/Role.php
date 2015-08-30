@@ -7,16 +7,16 @@
  * @author Keith Mifsud <http://www.keith-mifsud.com>
  */
 
-namespace KeithMifsud\Cms\Contracts\Access;
+namespace KeithMifsud\Cms\Contracts\Access\Domain;
 
 /**
- * Interface Access
+ * Interface Role
  *
- * Contract for the Access Logic (Domain).
+ * Contract for Role
  *
- * @package KeithMifsud\Cms\Contracts\Access
+ * @package KeithMifsud\Cms\Contracts\Access\Domain
  */
-interface Access
+interface Role
 {
 
 }
