@@ -27,7 +27,7 @@ class HolderTest extends CmsTest
 
     public function setup()
     {
-        $this->user = new User();
+        $this->user = User::setup('username', 'password');
     }
 
     public function testUserIsInstanceOfHolder()

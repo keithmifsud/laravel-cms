@@ -18,5 +18,22 @@ namespace KeithMifsud\Cms\Contracts\Access\Domain;
  */
 interface Holder
 {
+    /**
+     * Setup a new access holder.
+     *
+     * @param string $username
+     * @param string $password
+     *
+     * @return mixed
+     */
+    public static function setup($username, $password);
+
+
+    /**
+     * Get type name.
+     *
+     * @return string
+     */
+    public function getTypeName();
 
 }
