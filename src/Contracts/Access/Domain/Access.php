@@ -25,11 +25,11 @@ interface Access
      *
      * @param string $username
      * @param string $password
-     * @param string $type
+     * @param string|null $type
      *
      * @return Holder
      */
-    public function newAccess($username, $password,  $type);
+    public function newAccess($username, $password,  $type = null);
 
 
     /**

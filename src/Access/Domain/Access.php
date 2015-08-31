@@ -46,15 +46,15 @@ final class Access implements AccessContract
      *
      * @param string $username
      * @param string $password
-     * @param string $type
+     * @param string|null $type
      *
      * @return mixed
      *
      * @throws InvalidHolderTypeException
      */
-    public function newAccess($username, $password,  $type = 'user')
+    public function newAccess($username, $password,  $type = null)
     {
-        return $this->holderType->newHolderOfType($type, $username, $password);
+        return $this->holderType->newHolderOfType($username, $password, $type);
     }
 
 

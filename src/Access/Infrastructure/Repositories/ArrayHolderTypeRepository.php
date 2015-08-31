@@ -27,7 +27,8 @@ final class ArrayHolderTypeRepository implements HolderTypeRepository
     public $types = array(
         'user'  => array(
             'name'      =>  'user',
-            'className' =>  'KeithMifsud\Cms\Access\Domain\User'
+            'className' =>  'KeithMifsud\Cms\Access\Domain\User',
+            'default'   =>  1
         )
     );
 
@@ -62,9 +63,20 @@ final class ArrayHolderTypeRepository implements HolderTypeRepository
         return false;
     }
 
-    private function arrayToObject($array)
-    {
-        return (object) array_map(__FUNCTION__, $array);
-    }
 
+    /**
+     * Get the name of the default type
+     *
+     * @return string|bool
+     */
+    public function getDefaultTypeName()
+    {
+        foreach ($this->getAllTypes() as $type) {
+            if ($type->default) {
+                return $type->name;
+            }
+        }
+
+        return false;
+    }
 }

@@ -60,20 +60,22 @@ final class HolderType
     /**
      * Setup new holder of type.
      *
-     * @param string $type
      * @param string $username
      * @param string $password
+     * @param string|null $type
      *
      * @return KeithMifsud\Cms\Contracts\Access\Domain\Holder;
      * @throws InvalidHolderTypeException
      */
-    public function newHolderOfType($type, $username, $password)
+    public function newHolderOfType($username, $password, $type = null)
     {
-        $type = $this->constructValidHolderType($type);
+        if (!is_null($type)) {
+            $type = $this->constructValidHolderType($type);
+        } else {
+            $type = $this->constructValidHolderType($this->getDefault());
+        }
 
         $holder = $type->holder;
-
-
 
         return $holder::setup($username, $password);
     }
@@ -99,6 +101,18 @@ final class HolderType
         }
         throw new InvalidHolderTypeException('Type: ' . $type);
     }
+
+
+    /**
+     * Get the name of default type.
+     *
+     * @return string|bool
+     */
+    public function getDefault()
+    {
+        return $this->holderTypeRepository->getDefaultTypeName();
+    }
+
 
 
     /**

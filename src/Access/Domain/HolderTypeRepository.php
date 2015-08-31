@@ -35,4 +35,12 @@ interface HolderTypeRepository
      * @return  bool|\stdClass
      */
     public function getType($type);
+
+    /**
+     * Get the name of the default type
+     *
+     * @return string|bool
+     */
+    public function getDefaultTypeName();
+
 }
