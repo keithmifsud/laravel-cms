@@ -65,7 +65,7 @@ final class Access implements AccessContract
      *
      * @return Holder
      */
-    public static function retrieveHolderById($identifier)
+    public function retrieveHolderById($identifier)
     {
 
     }

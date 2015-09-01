@@ -39,7 +39,7 @@ interface Access
      *
      * @return Holder
      */
-    public static function retrieveHolderById($identifier);
+    public function retrieveHolderById($identifier);
 
 
     /**
